@@ -31,7 +31,7 @@ const Artist = () => {
     return (
         <div key={id}>
             <h2>{artist ? artist.artist : 'loading'}</h2>
-            <Link to={'/album'}>
+            <Link to={`/artist/album`}>
             <h3>Album</h3>
             </Link>
 
