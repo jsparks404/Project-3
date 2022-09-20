@@ -11,8 +11,8 @@ function App() {
       
       <Routes>
         <Route path='/' element={<Generate />} />
-        <Route path='/artist' element={<Artist />} />
-        <Route path='/artist/album' element={<Album />} />
+        <Route path='/artist/:id' element={<Artist />} />
+        <Route path='/album/:id' element={<Album />} />
       </Routes>
     </div>
   );

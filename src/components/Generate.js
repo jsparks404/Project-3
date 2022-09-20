@@ -11,7 +11,7 @@ const Generate = () => {
 
     return(
         <div>
-            <Link to={`/artist`}>
+            <Link to={`/artist/${id}`}>
                 <h2>Generate Random Metal Band</h2>
             </Link>
         </div>

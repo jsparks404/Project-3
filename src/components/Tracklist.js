@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import axios from 'axios'
-import { Link } from "react-router-dom";
-import Tracklist from "./Tracklist";
 
-const Album = () => {
-    const [artist, setArtist] = useState(null)
+const Tracklist = () => {
+    const [tracklist, setTracklist] = useState(null)
     const {id} = useParams()
     const URL = `http://metallizer.dk/api/json/DOOM${id}`
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -17,34 +16,17 @@ const Album = () => {
             // console.log(testString)
             const testObj = testString[1].split('\n);')
             // console.log(testObj)
-            const artistData = JSON.parse(testObj[0])
+            const TrackListData = JSON.parse(testObj[0])
             // console.log(artistData)
-            setArtist(artistData)
+            setTracklist(TrackListData)
         }
         fetchData()
+        console.log(tracklist)
     }, [])
-
-    // console.log(artist)
-
-
-    const loaded = () => {
-        return (
-            <div>
-                <h3>{artist.label}</h3>
-                <h1>{artist.album}</h1>
-                <Link to={'/'}><p>Return Home</p></Link>
-            </div>
-        )
-    }
-
-
-    return(
-
-        <h1>{artist ? loaded() : 'Loading'}</h1>
-    )
 }
+    
 
-export default Album
 
+  
 
-// create componenets for tracklist
+export default Tracklist
