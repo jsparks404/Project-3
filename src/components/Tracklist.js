@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import axios from 'axios'
 
+
 const Tracklist = () => {
     const [data, setData] = useState(null)
     const {id} = useParams()
     const URL = `http://metallizer.dk/api/json/DOOM${id}`
-
 
     useEffect(() => {
         const fetchData = async () => {
@@ -24,19 +24,15 @@ const Tracklist = () => {
     }, [])
     
     
-
     return (
-        <div>
+        <div className="tracklist">
             {data ?
             data.tracks.map((track) => (
-                <p>{track}</p>
+                <p className="track" key={track}>{track}</p>
             )) : <h3>Loading...</h3>}
         </div>
     )
 }
-    
 
-
-  
 
 export default Tracklist

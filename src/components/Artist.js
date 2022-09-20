@@ -2,10 +2,8 @@ import { useState, useEffect } from "react"
 import axios from 'axios'
 import { Link } from "react-router-dom"
 
-const Artist = () => {
 
-    // get random artist out of 10000 or so. Math.floor(Math.random() * 10000)
-    // set that random number to the url id.
+const Artist = () => {
     const [data, setData] = useState(null)
     const id = Math.floor(Math.random() * 10000)
     const URL = `http://metallizer.dk/api/json/DOOM${id}`
@@ -25,19 +23,15 @@ const Artist = () => {
         fetchData()
     }, [])
 
-  
-
 
     return (
         <div key={id}>
-            <h1>{data ? data.artist : 'loading'}</h1>
+            <h1 className="artist">{data ? data.artist : 'loading'}</h1>
             <Link to={`/album/${id}`}>
-            <h3>Album</h3>
+            <h3 className="albumLink">Album</h3>
             </Link>
-
-
             <Link to={'/'}>
-                <p>Return home</p>
+                <p className="homeLink">Return home</p>
             </Link>
         </div>
     )

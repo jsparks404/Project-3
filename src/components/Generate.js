@@ -8,9 +8,9 @@ const Generate = () => {
 
     return(
         <div>
-            <h1>Metal Band Generator</h1>
+            <h1 className="title">Metal Band Generator</h1>
             <Link to={`/artist`}>
-                <h2>Generate Random Metal Band</h2>
+                <button className="button">Generate Random Metal Band</button>
             </Link>
         </div>
     )

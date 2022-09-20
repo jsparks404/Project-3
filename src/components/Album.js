@@ -4,6 +4,7 @@ import axios from 'axios'
 import { Link } from "react-router-dom";
 import Tracklist from "./Tracklist";
 
+
 const Album = () => {
     const [data, setData] = useState(null)
     const {id} = useParams()
@@ -24,26 +25,19 @@ const Album = () => {
         fetchData()
     }, [])
 
-    
-
-
-  
-
 
     return(
             <div>
-                {data ? <h3>Label: {data.label}</h3>  : <h2>Loading...</h2> }
-                {data ? <h1>{data.album}</h1>  : <h2>Loading...</h2> }
-                {data ? <p>Year Released: {data.year}</p>  : <h2>Loading...</h2> }
-                
+                {data ? <h3 className="label">Label: {data.label}</h3>  : <h2>Loading...</h2> }
+                {data ? <h1 className="album">{data.album}</h1>  : <h2>Loading...</h2> }
+                {data ? <p className="year">Year Released: {data.year}</p>  : <h2>Loading...</h2> }
                 <Tracklist />
-                <Link to={'/'}><p>Return Home</p></Link>
+                <Link to={'/'}><p className="homeLink">Return Home</p></Link>
                 
             </div>
-
-        
     )
 }
+
 
 export default Album
 
