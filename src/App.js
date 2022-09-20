@@ -7,8 +7,6 @@ import Album from './components/Album';
 function App() {
   return (
     <div className="App">
-      <h1>Metal Band Generator</h1>
-      
       <Routes>
         <Route path='/' element={<Generate />} />
         <Route path='/artist/:id' element={<Artist />} />

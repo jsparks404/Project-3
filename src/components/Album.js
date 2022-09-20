@@ -27,21 +27,21 @@ const Album = () => {
     // console.log(artist)
 
 
-    const loaded = () => {
-        return (
-            <div>
-                <h3>{artist.label}</h3>
-                <h1>{artist.album}</h1>
-                <Tracklist />
-                <Link to={'/'}><p>Return Home</p></Link>
-            </div>
-        )
-    }
+  
 
 
     return(
+            <div>
+                {artist ? <h3>Label: {artist.label}</h3>  : <h2>Loading...</h2> }
+                {artist ? <h1>{artist.album}</h1>  : <h2>Loading...</h2> }
+                {artist ? <p>{artist.year}</p>  : <h2>Loading...</h2> }
+                
+                <Tracklist />
+                <Link to={'/'}><p>Return Home</p></Link>
+                
+            </div>
 
-        <h3>{artist ? loaded() : 'Loading'}</h3>
+        
     )
 }
 
