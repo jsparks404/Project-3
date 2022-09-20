@@ -32,6 +32,7 @@ const Album = () => {
             <div>
                 <h3>{artist.label}</h3>
                 <h1>{artist.album}</h1>
+                <Tracklist />
                 <Link to={'/'}><p>Return Home</p></Link>
             </div>
         )
@@ -40,7 +41,7 @@ const Album = () => {
 
     return(
 
-        <h1>{artist ? loaded() : 'Loading'}</h1>
+        <h3>{artist ? loaded() : 'Loading'}</h3>
     )
 }
 

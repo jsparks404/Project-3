@@ -21,8 +21,18 @@ const Tracklist = () => {
             setTracklist(TrackListData)
         }
         fetchData()
-        console.log(tracklist)
     }, [])
+    
+    console.log(tracklist)
+
+    return (
+        <div>
+            {tracklist ?
+            tracklist.tracks.map((track) => (
+                <p>{track}</p>
+            )) : <h3>Loading...</h3>}
+        </div>
+    )
 }
     
 
