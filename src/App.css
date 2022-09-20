@@ -1,17 +1,18 @@
 .App {
   text-align: center;
+  background-image: url('https://i.pinimg.com/564x/46/52/61/465261095d1523ceee9fbf4a1be389a5.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+
+
+
+
 
 .App-header {
   background-color: #282c34;
@@ -28,11 +29,4 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

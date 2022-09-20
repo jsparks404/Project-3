@@ -27,10 +27,10 @@ const Album = () => {
 
 
     return(
-            <div>
-                {data ? <h3 className="label">Label: {data.label}</h3>  : <h2>Loading...</h2> }
-                {data ? <h1 className="album">{data.album}</h1>  : <h2>Loading...</h2> }
-                {data ? <p className="year">Year Released: {data.year}</p>  : <h2>Loading...</h2> }
+            <div className="albumDiv">
+                {data ? <h3 className="label">Label: {data.label}</h3>  : <h3>Loading...</h3> }
+                {data ? <h1 className="album">{data.album}</h1>  : <h3>Loading...</h3> }
+                {data ? <p className="year">Year Released: {data.year}</p>  : <h3>Loading...</h3> }
                 <Tracklist />
                 <Link to={'/'}><p className="homeLink">Return Home</p></Link>
                 

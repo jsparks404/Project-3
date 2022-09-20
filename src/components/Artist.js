@@ -25,8 +25,8 @@ const Artist = () => {
 
 
     return (
-        <div key={id}>
-            <h1 className="artist">{data ? data.artist : 'loading'}</h1>
+        <div className="artistDiv" key={id}>
+            {data ? <h1 className="artist">{data.artist}</h1> : <h3>Loading...</h3>}
             <Link to={`/album/${id}`}>
             <h3 className="albumLink">Album</h3>
             </Link>
