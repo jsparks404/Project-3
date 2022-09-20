@@ -7,7 +7,7 @@ import Tracklist from "./Tracklist";
 
 const Album = () => {
     const [data, setData] = useState(null)
-    const {id} = useParams()
+    const { id } = useParams()
     const URL = `http://metallizer.dk/api/json/DOOM${id}`
 
     useEffect(() => {
@@ -26,15 +26,16 @@ const Album = () => {
     }, [])
 
 
-    return(
-            <div className="albumDiv">
-                {data ? <h3 className="label">Label: {data.label}</h3>  : <h3>Loading...</h3> }
-                {data ? <h1 className="album">{data.album}</h1>  : <h3>Loading...</h3> }
-                {data ? <p className="year">Year Released: {data.year}</p>  : <h3>Loading...</h3> }
-                <Tracklist />
+    return (
+        <div className="albumDiv">
+            {data ? <h3 className="label">Label: {data.label}</h3> : <h3>Loading...</h3>}
+            {data ? <h1 className="album">{data.album}</h1> : <h3>Loading...</h3>}
+            {data ? <p className="year">Year Released: {data.year}</p> : <h3>Loading...</h3>}
+            <Tracklist />
+            <div>
                 <Link to={'/'}><p className="homeLink">Return Home</p></Link>
-                
             </div>
+        </div>
     )
 }
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
 .App {
   text-align: center;
   background-image: url('https://i.pinimg.com/564x/46/52/61/465261095d1523ceee9fbf4a1be389a5.jpg');
@@ -5,28 +7,92 @@
   background-repeat: no-repeat;
   height: 100vh;
   color: white;
-  
-}
-
-
-
-
-
-
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-family: Metal Mania;
+  position: relative;
+  max-width: 960px;
+  max-height: 500px;
+}
+
+.title{
+  margin: 100px 0 30px 0;
+  position: relative;
+  top: -150px;
+  font-size: 4em;
+  -webkit-text-stroke: 1px black;
+}
+
+.button {
+  height: 150px;
+  width: 366px;
+  border-radius: 10px;
+  background-image: url('https://t3.ftcdn.net/jpg/00/42/10/22/240_F_42102270_GToslRQdsxIKnnzJknhB9Dlqkr0n8lLF.jpg');
+  font-size: 2.5em;
+  font-family: Metal Mania;
+  -webkit-text-stroke: 1px black;
   color: white;
+  position: relative;
+  top: -60px;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.artist {
+  font-size: 4em;
+  -webkit-text-stroke: 1px black;
+}
+
+.albumLink {
+  color: rgb(255, 255, 255);
+  font-size: 1.5em;
+  -webkit-text-stroke: .1px black;
+  text-decoration: none!;
+}
+
+.albumLink:hover {
+  color: black;
 }
 
 
+.label {
+  font-size: 2em;
+  -webkit-text-stroke: .08px black;
+  margin: 10px 5px;
+}
+
+.album {
+  font-size: 3em;
+  margin: 5px 1px;
+  -webkit-text-stroke: .3px black;
+}
+
+.year {
+  font-size: 1.5em;
+  margin-top: 2px;
+  -webkit-text-stroke: .5px black;
+}
+
+.track {
+  font-size: 1.1em;
+  margin: 5px;
+  padding: 0px;
+  -webkit-text-stroke: .3px black;
+}
+
+.homeLink{
+  position: relative;
+  bottom: -10px;
+  color: aliceblue;
+  -webkit-text-stroke: .1px black;
+  text-decoration: none;
+}
+
+.homeLink:hover {
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+}
