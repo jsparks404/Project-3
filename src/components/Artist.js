@@ -14,11 +14,11 @@ const Artist = () => {
         const fetchData = async () => {
             const res = await axios.get(URL)
             // console.log(res.data)
-            const testString = res.data.split('jsonMetallizerAlbum(')
+            const string = res.data.split('jsonMetallizerAlbum(')
             // console.log(testString)
-            const testObj = testString[1].split('\n);')
+            const obj = string[1].split('\n);')
             // console.log(testObj)
-            const artistData = JSON.parse(testObj[0])
+            const artistData = JSON.parse(obj[0])
             // console.log(artistData)
             setData(artistData)
         }
