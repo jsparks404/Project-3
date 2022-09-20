@@ -24,6 +24,7 @@ const Artist = () => {
     }, [])
 
 
+
     return (
         <div className="artistDiv" key={id}>
             {data ? <h1 className="artist">{data.artist}</h1> : <h3>Loading...</h3>}
