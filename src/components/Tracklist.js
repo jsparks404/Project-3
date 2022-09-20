@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import axios from 'axios'
 
 const Tracklist = () => {
-    const [tracklist, setTracklist] = useState(null)
+    const [data, setData] = useState(null)
     const {id} = useParams()
     const URL = `http://metallizer.dk/api/json/DOOM${id}`
 
@@ -16,19 +16,19 @@ const Tracklist = () => {
             // console.log(testString)
             const testObj = testString[1].split('\n);')
             // console.log(testObj)
-            const TrackListData = JSON.parse(testObj[0])
+            const artistData = JSON.parse(testObj[0])
             // console.log(artistData)
-            setTracklist(TrackListData)
+            setData(artistData)
         }
         fetchData()
     }, [])
     
-    console.log(tracklist)
+    
 
     return (
         <div>
-            {tracklist ?
-            tracklist.tracks.map((track) => (
+            {data ?
+            data.tracks.map((track) => (
                 <p>{track}</p>
             )) : <h3>Loading...</h3>}
         </div>

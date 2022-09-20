@@ -6,9 +6,9 @@ const Artist = () => {
 
     // get random artist out of 10000 or so. Math.floor(Math.random() * 10000)
     // set that random number to the url id.
+    const [data, setData] = useState(null)
     const id = Math.floor(Math.random() * 10000)
     const URL = `http://metallizer.dk/api/json/DOOM${id}`
-    const [artist, setArtist] = useState(null)
 
     useEffect(() => {
         const fetchData = async () => {
@@ -20,17 +20,17 @@ const Artist = () => {
             // console.log(testObj)
             const artistData = JSON.parse(testObj[0])
             // console.log(artistData)
-            setArtist(artistData)
+            setData(artistData)
         }
         fetchData()
     }, [])
 
-    // console.log(artist.id)
+  
 
 
     return (
         <div key={id}>
-            <h1>{artist ? artist.artist : 'loading'}</h1>
+            <h1>{data ? data.artist : 'loading'}</h1>
             <Link to={`/album/${id}`}>
             <h3>Album</h3>
             </Link>

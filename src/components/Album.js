@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Tracklist from "./Tracklist";
 
 const Album = () => {
-    const [artist, setArtist] = useState(null)
+    const [data, setData] = useState(null)
     const {id} = useParams()
     const URL = `http://metallizer.dk/api/json/DOOM${id}`
 
@@ -19,12 +19,12 @@ const Album = () => {
             // console.log(testObj)
             const artistData = JSON.parse(testObj[0])
             // console.log(artistData)
-            setArtist(artistData)
+            setData(artistData)
         }
         fetchData()
     }, [])
 
-    // console.log(artist)
+    
 
 
   
@@ -32,9 +32,9 @@ const Album = () => {
 
     return(
             <div>
-                {artist ? <h3>Label: {artist.label}</h3>  : <h2>Loading...</h2> }
-                {artist ? <h1>{artist.album}</h1>  : <h2>Loading...</h2> }
-                {artist ? <p>{artist.year}</p>  : <h2>Loading...</h2> }
+                {data ? <h3>Label: {data.label}</h3>  : <h2>Loading...</h2> }
+                {data ? <h1>{data.album}</h1>  : <h2>Loading...</h2> }
+                {data ? <p>Year Released: {data.year}</p>  : <h2>Loading...</h2> }
                 
                 <Tracklist />
                 <Link to={'/'}><p>Return Home</p></Link>
