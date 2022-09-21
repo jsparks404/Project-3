@@ -3,6 +3,7 @@ import './App.css';
 import Generate from './components/Generate';
 import Artist from './components/Artist';
 import Album from './components/Album';
+import AlbumCovers from './components/AlbumCovers';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path='/' element={<Generate />} />
         <Route path='/artist' element={<Artist />} />
         <Route path='/album/:id' element={<Album />} />
+        <Route path='/albumcovers' element={<AlbumCovers />} />
       </Routes>
     </div>
   );
