@@ -5,7 +5,7 @@ const Covers = () => {
     
     const [covers, setCovers] = useState([])
     const id = Math.floor(Math.random() * 20)
-    const URL = `http://localhost:4000/albums`
+    const URL = `https://metal-band-generator-backend.herokuapp.com/albums`
     // console.log(URL) 
 
     const fetchData = async () => {
