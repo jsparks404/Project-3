@@ -16,9 +16,7 @@ const AlbumCovers = () => {
         }
     }
     useEffect(() => {
-        setTimeout(() => {
             fetchData()
-        }, 500)
     }, [])
 
     console.log(covers)

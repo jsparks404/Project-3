@@ -4,6 +4,7 @@ import Generate from './components/Generate';
 import Artist from './components/Artist';
 import Album from './components/Album';
 import AlbumCovers from './components/AlbumCovers';
+import AlbumCover from './components/AlbumCover';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='/artist' element={<Artist />} />
         <Route path='/album/:id' element={<Album />} />
         <Route path='/albumcovers' element={<AlbumCovers />} />
+        <Route path='/albumcovers/:id' element={<AlbumCover />} />
       </Routes>
     </div>
   );
