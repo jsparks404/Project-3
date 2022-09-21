@@ -12,13 +12,9 @@ const Artist = () => {
     useEffect(() => {
         const fetchData = async () => {
             const res = await axios.get(URL)
-            // console.log(res.data)
             const string = res.data.split('jsonMetallizerAlbum(')
-            // console.log(testString)
             const obj = string[1].split('\n);')
-            // console.log(testObj)
             const artistData = JSON.parse(obj[0])
-            // console.log(artistData)
             setData(artistData)
         }
         fetchData()
