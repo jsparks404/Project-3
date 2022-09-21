@@ -14,7 +14,7 @@ const Covers = () => {
         const allCovers = await res.json()
         // console.log(allCovers)
         setCovers(allCovers[id].img)
-        console.log(covers)
+        // console.log(covers)
        } catch(err) {
         console.log(err)
        }
@@ -23,7 +23,7 @@ const Covers = () => {
     useEffect(() => {
         fetchData()
     }, [])
-    console.log(covers)
+    // console.log(covers)
 
     return (
         <div>
