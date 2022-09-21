@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
 import { Link } from "react-router-dom"
+import Covers from "./Covers"
 
 
 const Artist = () => {
@@ -34,6 +35,7 @@ const Artist = () => {
             <Link to={'/'}>
                 <p className="homeLink">Return home</p>
             </Link>
+            <Covers />
         </div>
     )
 }
