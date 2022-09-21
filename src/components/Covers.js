@@ -2,10 +2,9 @@ import { useState, useEffect } from "react"
 import axios from 'axios'
 
 const Covers = () => {
-    const [covers, setCovers] = useState([])
+    const [covers, setCovers] = useState(null)
     const id = Math.floor(Math.random() * 33)
     const URL = `https://metal-band-generator-backend.herokuapp.com/albums`
-    
 
     const fetchData = async () => {
        try {
@@ -27,7 +26,6 @@ const Covers = () => {
             {covers ? <img className="cover" src={covers} /> : null}
         </div>
     )
-
 }
 
 

@@ -31,7 +31,6 @@ const Artist = () => {
             <Link to={'/'}>
                 <p className="homeLink">Return home</p>
             </Link>
-            
         </div>
     )
 }
