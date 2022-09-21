@@ -19,7 +19,7 @@ const AlbumCovers = () => {
             fetchData()
     }, [])
 
-    console.log(covers)
+    // console.log(covers)
 
     return (
         <div>
