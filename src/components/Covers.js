@@ -4,7 +4,7 @@ import axios from 'axios'
 const Covers = () => {
     
     const [covers, setCovers] = useState([])
-    const id = Math.floor(Math.random() * 20)
+    const id = Math.floor(Math.random() * 33)
     const URL = `https://metal-band-generator-backend.herokuapp.com/albums`
     // console.log(URL) 
 
