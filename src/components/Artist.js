@@ -21,7 +21,6 @@ const Artist = () => {
     }, [])
 
 
-
     return (
         <div className="artistDiv" key={id}>
             <Covers />
@@ -32,7 +31,6 @@ const Artist = () => {
             <Link to={'/'}>
                 <p className="homeLink">Return home</p>
             </Link>
-            
         </div>
     )
 }

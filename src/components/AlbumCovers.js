@@ -15,11 +15,11 @@ const AlbumCovers = () => {
             console.log(err)
         }
     }
+
     useEffect(() => {
             fetchData()
     }, [])
 
-    // console.log(covers)
 
     return (
         <div>
@@ -34,8 +34,6 @@ const AlbumCovers = () => {
             </Link>
         </div>
     )
-
-
 }
 
 

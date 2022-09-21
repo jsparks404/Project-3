@@ -32,9 +32,6 @@ const AlbumCover = () => {
             </Link>
         </div>
     )
-
-
-
 }
 
 
