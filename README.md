@@ -7,7 +7,7 @@
 
 ## Screenshots
 
-![screenshot](https://ibb.co/Gnw73Hq)
+![screenshot](https://i.ibb.co/vV51vXS/Screen-Shot-2022-09-22-at-11-41-25-AM.png)
 ![screenshot](https://ibb.co/3yVPPbW)
 ![screenshot](https://ibb.co/hghLchV)
 ![screenshot](https://ibb.co/XkcyFqk)
