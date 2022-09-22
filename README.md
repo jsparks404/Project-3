@@ -8,9 +8,9 @@
 ## Screenshots
 
 ![screenshot](https://i.ibb.co/vV51vXS/Screen-Shot-2022-09-22-at-11-41-25-AM.png)
-![screenshot](https://ibb.co/3yVPPbW)
-![screenshot](https://ibb.co/hghLchV)
-![screenshot](https://ibb.co/XkcyFqk)
+![screenshot](https://i.ibb.co/8DGQQw2/Screen-Shot-2022-09-22-at-11-41-40-AM.png)
+![screenshot](https://i.ibb.co/10h7MhT/Screen-Shot-2022-09-22-at-11-42-05-AM.png)
+![screenshot](https://i.ibb.co/PzqT1dz/Screen-Shot-2022-09-22-at-11-42-28-AM.png)
 
 ## Technologies Used
 
