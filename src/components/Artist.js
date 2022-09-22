@@ -6,7 +6,7 @@ import Covers from "./Covers"
 
 const Artist = () => {
     const [data, setData] = useState(null)
-    const id = Math.floor(Math.random() * 10000)
+    const id = Math.floor(Math.random() * 50000)
     const URL = `http://metallizer.dk/api/json/DOOM${id}`
 
     useEffect(() => {
