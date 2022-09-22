@@ -18,6 +18,12 @@ JavaScript, Mongoose, Express, React, Node.js, (MERN), CSS
 
 ## Getting started
 
-
+The homepage has a button that will take you to the page that randomly generates a metal band name, with a random album cover. On this page there is a link for a page with a random album, showing the label, album name, and tracklist. Also on the homepage is a link to a page that shows several different album covers. If a specific album cover is clicked, a new page will display that album cover larger.
+Each page also has a link to return to the homepage.
 
 ## Links
+   
+   Front End - Host - https://metal-band-generator.netlify.app/
+             - GitHub - https://github.com/jsparks404/Project-3/tree/main
+
+   Back End - GitHub - https://github.com/jsparks404/project-3-backend
