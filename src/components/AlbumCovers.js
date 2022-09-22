@@ -5,7 +5,7 @@ const AlbumCovers = () => {
     const [covers, setCovers] = useState([])
     const id = Math.floor(Math.random() * 33)
     const URL = `https://metal-band-generator-backend.herokuapp.com/albums`
-    const initForm = {img: ''}
+    const initForm = { img: '' }
     const [newForm, setNewForm] = useState(initForm)
 
     const fetchData = async () => {
@@ -19,18 +19,18 @@ const AlbumCovers = () => {
     }
 
     useEffect(() => {
-            fetchData()
+        fetchData()
     }, [])
 
     const handleChange = (e) => {
-        const data = {...newForm, [e.target.name]: e.target.value}
+        const data = { ...newForm, [e.target.name]: e.target.value }
         setNewForm(data)
     }
 
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const newImage = {...newForm}
+            const newImage = { ...newForm }
             const options = {
                 method: 'POST',
                 headers: {
@@ -41,8 +41,8 @@ const AlbumCovers = () => {
             const response = await fetch(URL, options)
             const responseData = await response.json()
             fetchData()
-            setNewForm({img: ''})
-        } catch(err) {
+            setNewForm({ img: '' })
+        } catch (err) {
             console.log(err)
         }
     }
