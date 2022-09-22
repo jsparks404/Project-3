@@ -113,6 +113,14 @@
   justify-content: center;
 }
 
+.form {
+  margin-bottom: 50px;
+}
+
+.addCover {
+  -webkit-text-stroke: .2px black;
+}
+
 .albumCovers {
   max-width: 65px;
   margin: 0 2px;

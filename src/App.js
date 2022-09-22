@@ -21,3 +21,5 @@ function App() {
 }
 
 export default App;
+
+// add post option for album covers, readme etc...
