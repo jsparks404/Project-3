@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 
+
 const AlbumCovers = () => {
     const [covers, setCovers] = useState([])
     const id = Math.floor(Math.random() * 33)

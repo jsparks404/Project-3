@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { useParams } from "react-router"
 import { Link } from "react-router-dom"
 
+
 const AlbumCover = () => {
     const [cover, setCover] = useState(null)
     const { id } = useParams()

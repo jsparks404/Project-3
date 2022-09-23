@@ -6,6 +6,7 @@ import Album from './components/Album';
 import AlbumCovers from './components/AlbumCovers';
 import AlbumCover from './components/AlbumCover';
 
+
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
 
