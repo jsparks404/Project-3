@@ -7,19 +7,19 @@ const Covers = () => {
     const URL = `https://metal-band-generator-backend.herokuapp.com/albums`
 
     const fetchData = async () => {
-       try {
-        const res = await fetch(URL)
-        const allCovers = await res.json()
-        setCovers(allCovers[id].img)
-       } catch(err) {
-        console.log(err)
-       }
+        try {
+            const res = await fetch(URL)
+            const allCovers = await res.json()
+            setCovers(allCovers[id].img)
+        } catch (err) {
+            console.log(err)
+        }
     }
-    
+
     useEffect(() => {
         fetchData()
     }, [])
-    
+
 
     return (
         <div>

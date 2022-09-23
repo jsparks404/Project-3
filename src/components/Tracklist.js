@@ -5,7 +5,7 @@ import axios from 'axios'
 
 const Tracklist = () => {
     const [data, setData] = useState(null)
-    const {id} = useParams()
+    const { id } = useParams()
     const URL = `http://metallizer.dk/api/json/DOOM${id}`
 
     useEffect(() => {
@@ -18,10 +18,10 @@ const Tracklist = () => {
         }
         fetchData()
     }, [])
-    
-    
+
+
     return (
-        <div className="tracklist">         
+        <div className="tracklist">
             {data ? data.tracks.map((track) => (
                 <p className="track" key={track}>{track}</p>
             )) : <h3>Loading...</h3>}
