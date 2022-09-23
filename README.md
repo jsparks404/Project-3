@@ -1,3 +1,8 @@
+## Disclaimer
+   I ran into a CORS error while trying to fetch from my api. I was able to go around it by installing a chrome extension to my browser. If you want to view the project in your own browser, you may need to install a similar extension. The extension I have installed is called 'CORS Unblock'.
+
+
+
 # Metal Band Generator
    
    Tired of always being the one to come up with a name for your various metal bands? Now there is a much easier way. This app is an easy to use metal band generator with 50,000 possible band names. It also includes names for albums, labels, and tracks. As an added bonus, there is list of album covers from real artists, which can be viewed individually, to give you inspiration on creating your own cover. You can even add covers yourself to help inspire people.
