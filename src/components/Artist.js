@@ -6,16 +6,14 @@ import Covers from "./Covers"
 
 const Artist = () => {
     const [data, setData] = useState(null)
-    const id = Math.floor(Math.random() * 50000)
-    const URL = `http://metallizer.dk/api/json/DOOM${id}`
+    const id = Math.floor(Math.random() * 31)
+    const URL = 'https://metal-band-generator-backend.herokuapp.com/artists'
 
     useEffect(() => {
         const fetchData = async () => {
-            const res = await axios.get(URL)
-            const string = res.data.split('jsonMetallizerAlbum(')
-            const obj = string[1].split('\n);')
-            const artistData = JSON.parse(obj[0])
-            setData(artistData)
+            const res = await fetch(URL)
+            const artistData = await res.json()
+            setData(artistData[id])
         }
         fetchData()
     }, [])
