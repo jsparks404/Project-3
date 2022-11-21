@@ -5,6 +5,8 @@ import axios from 'axios'
 
 const Tracklist = () => {
     const [data, setData] = useState(null)
+    const {id} = useParams()
+    const URL = 'https://metal-band-generator-backend.herokuapp.com/artists' 
 
 
 
