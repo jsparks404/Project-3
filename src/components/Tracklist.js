@@ -5,8 +5,8 @@ import axios from 'axios'
 
 const Tracklist = () => {
     const [data, setData] = useState(null)
-    const {id} = useParams()
-    const URL = 'https://metal-band-generator-backend.herokuapp.com/artists'
+
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -16,12 +16,11 @@ const Tracklist = () => {
         }
         fetchData()
     }, [])
-    
-    
+
+
     return (
         <div className="tracklist">
-            {data ?
-            data.tracks.map((track) => (
+            {data ? data.tracks.map((track) => (
                 <p className="track" key={track}>{track}</p>
             )) : <h3>Loading...</h3>}
         </div>

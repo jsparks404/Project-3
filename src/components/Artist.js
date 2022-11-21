@@ -23,8 +23,7 @@ const Artist = () => {
         <div className="artistDiv" key={id}>
             <Covers />
             {data ? <h1 className="artist">{data.artist}</h1> : <h3>Loading...</h3>}
-            <Link key={id} to={`/album/${id}`}>
-            <h3 className="albumLink">Album</h3>
+
             </Link>
             <Link to={'/'}>
                 <p className="homeLink">Return home</p>

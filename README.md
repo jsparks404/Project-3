@@ -19,7 +19,7 @@
 
 ## Technologies Used
 
-JavaScript, Mongoose, Express, React, Node.js, (MERN), CSS
+JavaScript, Mongoose, Express, React, Node.js, (MERN), JSX, CSS
 
 ## Getting started
 

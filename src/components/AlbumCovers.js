@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 
+
 const AlbumCovers = () => {
     const [covers, setCovers] = useState([])
-    const id = Math.floor(Math.random() * 33)
     const URL = `https://metal-band-generator-backend.herokuapp.com/albums`
     const initForm = { img: '' }
     const [newForm, setNewForm] = useState(initForm)
@@ -39,7 +39,6 @@ const AlbumCovers = () => {
                 body: JSON.stringify(newImage)
             }
             const response = await fetch(URL, options)
-            const responseData = await response.json()
             fetchData()
             setNewForm({ img: '' })
         } catch (err) {
