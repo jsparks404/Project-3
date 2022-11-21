@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import axios from 'axios'
 import { Link } from "react-router-dom";
 import Tracklist from "./Tracklist";
 
@@ -8,16 +7,15 @@ import Tracklist from "./Tracklist";
 const Album = () => {
     const [data, setData] = useState(null)
     const { id } = useParams()
-    const URL = `http://metallizer.dk/api/json/DOOM${id}`
+    const URL = 'https://metal-band-generator-backend.herokuapp.com/artists'
 
     useEffect(() => {
         const fetchData = async () => {
-            const res = await axios.get(URL)
-            const string = res.data.split('jsonMetallizerAlbum(')
-            const obj = string[1].split('\n);')
-            const artistData = JSON.parse(obj[0])
-            setData(artistData)
+            const res = await fetch(URL)
+            const artistData = await res.json()
+            setData(artistData[id])
         }
+        console.log(data)
         fetchData()
     }, [])
 
