@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import axios from 'axios'
 import { Link } from "react-router-dom";
 import Tracklist from "./Tracklist";
 
@@ -13,9 +12,10 @@ const Album = () => {
     useEffect(() => {
         const fetchData = async () => {
             const res = await fetch(URL)
-            const artistData = res.json()
+            const artistData = await res.json()
             setData(artistData[id])
         }
+        console.log(data)
         fetchData()
     }, [])
 
